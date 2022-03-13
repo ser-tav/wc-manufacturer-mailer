@@ -17,10 +17,6 @@
 		
 		public function on_load()
 		{
-			/*		if(isset($_REQUEST['test_order_process'])){
-				$order_id = 9279;
-				$this->order_processed($order_id);
-			}*/
 		}
 		
 		public function order_processed($order_id)
