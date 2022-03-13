@@ -35,10 +35,10 @@
 				$price = $order_item->get_total();
 				
 				$product_data = [
-                'name' => $name,
-                'price' => $price,
-                'quantity' => $quantity,
-                'attributes' => []
+					'name' => $name,
+					'price' => $price,
+					'quantity' => $quantity,
+					'attributes' => []
 				];
 				
 				foreach ($order_item_meta_data as $order_item_meta) {
@@ -61,8 +61,8 @@
 						$display_key = 'Hips (cm)';
 					}
 					$product_data['attributes'][] = [
-                    'name' => $display_key,
-                    'value' => $display_value
+					    'name' => $display_key,
+					    'value' => $display_value
 					];
 				}
 				
@@ -82,12 +82,12 @@
 				$email_heading = 'New Order: #' . $order->get_order_number();
 				
 				wc_get_template('emails/template.php', array(
-                'products' => $products,
-                'order' => $order,
-                'text_align' => $text_align,
-                'email_heading' => $email_heading,
-                'email' => $email_data['email'],
-                'manufacturer_id' => $manufacturer_id
+					'products' => $products,
+					'order' => $order,
+					'text_align' => $text_align,
+					'email_heading' => $email_heading,
+					'email' => $email_data['email'],
+					'manufacturer_id' => $manufacturer_id
 				));
 				
 				$email_content = ob_get_contents();
